@@ -7,18 +7,18 @@ export default function () {
     return [
         {
             id: 1,
-            first: "Bucky",
-            last: "Roberts",
-            age: 71,
-            description: "Bucky is a React developer and YouTuber",
-            thumbnail: "http://i.imgur.com/7yUvePI.jpg"
+            name: "Squirrel College",
+            age: 31,
+            description: "This is a financial aid app for UC and CSU.",
+            url: "https://play.google.com/store/apps/details?id=com.squirrel.android.collegefootprints",
+            thumbnail:"https://lh3.googleusercontent.com/9GnCRKDTLpLQQA-_fcbFluORvqjcaFwASmvg-lmqZoMxjZY3TIyD4DoBHY3Dd-waGSQl=s180-rw"
         },
         {
             id: 2,
-            first: "Joby",
-            last: "Wasilenko",
-            age: 27,
+            name: "Angel_Shield",
+            
             description: "Joby loves the Packers, cheese, and turtles.",
+            url:"" ,
             thumbnail: "http://i.imgur.com/52xRlm8.png"
         },
         {
