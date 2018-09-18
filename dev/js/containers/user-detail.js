@@ -13,8 +13,10 @@ class UserDetail extends Component {
         return (
             <div>
                 <h1>{this.props.user.name}</h1>
-                <image src={this.props.user.thumbnail} ></image>
-                <h3>To Download:{this.props.user.url} </h3>
+                <a href= {this.props.usesr.url}>
+                    <image src={this.props.user.thumbnail} ></image>
+                </a>
+                <h3 href = {this.props.user.url}>CLICK HERE TO DOWNLOAD.</h3>
                 <h3>Description: {this.props.user.description}</h3>
             </div>
         );
