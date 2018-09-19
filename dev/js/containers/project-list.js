@@ -21,9 +21,9 @@ class UserList extends Component {
 
     render() {
         return (
-            <ul>
+            <h2>
                 {this.renderList()}
-            </ul>
+            </h2>
         );
     }
 
