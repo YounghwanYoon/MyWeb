@@ -6,10 +6,21 @@
 .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column: 1;
-  grid-column: 1fr, 1fr, 1fr,1fr;
-  -ms-grid-row: 1;
-  grid-row: 1fr, 1fr, 1fr;
+  -ms-grid-columns: 1fr, 1fr, 1fr,1fr;
+      grid-template-columns: 1fr, 1fr, 1fr,1fr;
+  -ms-grid-rows: 1fr, 1fr, 1fr;
+      grid-template-rows: 1fr, 1fr, 1fr;
       grid-template-areas: "header header header header" "content content content content" "footer footer footer footer";
+}
+
+.mainNav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: header;
+}
+
+.mainNav .main-nav-list {
+  float: right;
 }
 /*# sourceMappingURL=mygrid.css.map */

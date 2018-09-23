@@ -5,8 +5,8 @@
 
 .wrapper{
     display: grid;
-    grid-column: 1fr, 1fr, 1fr,1fr; 
-    grid-row: 1fr, 1fr, 1fr; 
+    grid-template-columns: 1fr, 1fr, 1fr,1fr; 
+    grid-template-rows: 1fr, 1fr, 1fr; 
     grid-template-areas:     
     "header header header header"
     "content content content content"
@@ -14,5 +14,9 @@
 }
 
 .mainNav{
-     
+    grid-area:header;
+    
+    .main-nav-list{
+        float:right;
+    }
 }
