@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray's Projects</title>
+    <link href="css/myweb.css" rel="stylesheet" type ="text/css">
+</head>
+<body>
+    <div id="header">
+        <div className ="row">
+            <div className="container" onclick="myFunction(this)">
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+            </div>
+            <script>
+                function myFunction(x) {
+                    x.classNameList.toggle("change");
+                }
+            </script>
+
+            <ul className ="main-nav">
+                <li className="active"><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>    
+    </div>
+    <section id="main_content"></section>
+    <script src="js/bundle.min.js"></script>
+</body>
+</html>

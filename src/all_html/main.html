@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Ray's Projects</title>
     <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>
-    <link href="../dev/scss/style.css" rel="stylesheet" type ="text/css">
+    <link href="../../dev/scss/main.css" rel="stylesheet" type ="text/css">
 </head>
 <body>
     <div class="wrapper">
-        <nav class ="row">
+        <nav class ="header">
             <div class="container" onclick="myFunction(this)">
               <div class="bar1"></div>
               <div class="bar2"></div>
@@ -20,25 +20,29 @@
                     visibility();
                 }
             </script>
-
+            <script type ="text/javascript">
+                function visibility() {  
+                    var state = ($("ul").css("visibility"));
+                    if(state == 'hidden'){
+                        $('ul').css("visibility", "visible");
+                    }
+                    else{
+                        $('ul').css("visibility", "hidden");
+                    }
+                }            
+            </script>
             <ul class ="main-nav">
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">Service</a></li>
+                <li class="active"><a href="../../src/all_html/main.html">Home</a></li>
+                <li><a href="../../src/index.html">Programs</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
-            <script type ="text/javascript">
-                var state = ($("ul").css("visibility"));
-                console.log(state);
-                function visibility() {  
-                    $('ul').toggle("change");
-                }            
-                </script>
-        </nav>    
-    </div>
-    <div class ="main">
-        <section id="main_content"></section>
-        <script src="js/bundle.min.js"></script>
+        </nav> 
+        <div class ="content">
+            
+
+        </div>
+        
     </div>
 </body>
 </html>

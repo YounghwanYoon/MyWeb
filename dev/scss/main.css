@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr,1fr,1fr,1fr;
+      grid-template-columns: 1fr,1fr,1fr,1fr;
+  -ms-grid-rows: 1fr,1fr,1fr,1fr;
+      grid-template-rows: 1fr,1fr,1fr,1fr;
+      grid-template-areas: ".header header." ".content content." ".header header." ".header header.";
+  background-image: url(http://dualmonitorswallpaper.com/wp-content/uploads/2018/03/1980x1080-mooon-13.jpg);
+  background-size: cover;
+  /*height: 100vh;
+    background-position: center;
+    background-color:rgba(rgb(41, 22, 22),1.0);*/
+}
+
+.main-nav {
+  grid-area: header;
+  /*
+    float:right;
+    list-style:none;
+    margin-top:30px;*/
+  visibility: hidden;
+}
+
+.change .main-nav {
+  visibility: visible;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.main-nav li a:hover {
+  border: 1px solid white;
+}
+
+.container {
+  cursor: pointer;
+  width: 150px;
+  height: auto;
+  float: left;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffdfdf;
+  margin: 6px 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-8px, 8px);
+  width: 30px;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(-45deg) translate(9px, -6px);
+  transform: rotate(45deg) translate(-9px, -6px);
+  width: 30px;
+}
+
+.main {
+  visibility: hidden;
+}
+
+.change #main_content {
+  visibility: visible;
+}
+
+#topPanel {
+  background: #77db77;
+  border: #221212;
+  height: 100%;
+  width: 100%;
+  background: #29afd1;
+  display: inline-block;
+  border-radius: 500px;
+  margin: 0;
+  position: relative;
+  padding: 50px;
+}
+
+#leftPanel {
+  height: 95%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+#leftPanel_Title {
+  background-color: #008081;
+  text-align: "center";
+  color: #FFFDD0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 5px;
+}
+
+#leftPanel button {
+  margin-top: 20px;
+  background-color: #008081;
+  color: #FFFDD0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  box-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#rightPanel {
+  height: 100%;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 20%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=main.css.map */
