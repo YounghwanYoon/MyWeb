@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Grid Testing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="../../dev/scss/grid.css" rel="stylesheet" type ="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav class ="header">
+            <div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <script type="text/javascript">
+                function myFunction(x) {  
+                    x.classList.toggle("change");
+                    visibility();
+                }
+            </script>
+            <script type ="text/javascript">
+                function visibility() {  
+                    var state = ($("ul").css("visibility"));
+                    if(state == 'hidden'){
+                        $('ul').css("visibility", "visible");
+                    }
+                    else{
+                        $('ul').css("visibility", "hidden");
+                    }
+                }            
+            </script>
+            <ul class ="main-nav">
+                <li class="active"><a href="../../src/all_html/main.html">Home</a></li>
+                <li><a href="../../src/index.html">Programs</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav> 
+        <section class="top-container">
+            <header class="showcase">
+                <h1>Your Web Presence</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor nam inventore dignissimos autem consequuntur dicta!</p>
+                <a href="#" class="btn">Read More</a>
+            </header>
+            <div class="topbox top-box-a">
+                <h4>Pro Membership</h4>
+                <p class="price">$199/mo</p>
+                <a href="" class=btn>Buy now</a>
+            </div>
+        
+        </section>       
+        
+        <section class="boxes">
+            <div class="box">
+                
+            </div>
+        </section>
+    </div>
+    <!-- Wrapper Ends -->
+</body>
+</html>
