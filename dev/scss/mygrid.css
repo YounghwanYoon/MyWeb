@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  grid-column: 1fr, 1fr, 1fr,1fr;
+  -ms-grid-row: 1;
+  grid-row: 1fr, 1fr, 1fr;
+      grid-template-areas: "header header header header" "content content content content" "footer footer footer footer";
+}
+/*# sourceMappingURL=mygrid.css.map */

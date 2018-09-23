@@ -6,6 +6,11 @@
     "dev": "webpack",
     "start": "webpack-dev-server"
   },
+"repository": {
+  "type":"git",
+  "url": "git://github.com/YounghwanYoon/myWeb.git"  
+},
+
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.10.4",
