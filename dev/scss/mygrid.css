@@ -1,6 +1,24 @@
+:root {
+  --primary: black;
+  --dark:black;
+  --light: #fff;
+  --dark-blue: #00468B;
+  --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 30px 50px;
+  padding-top: 30px;
+  height: 100%;
+  background: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) no-repeat center center fixed;
+  background-size: cover;
 }
 
 .wrapper {
@@ -10,17 +28,88 @@
       grid-template-columns: 1fr, 1fr, 1fr,1fr;
   -ms-grid-rows: 1fr, 1fr, 1fr;
       grid-template-rows: 1fr, 1fr, 1fr;
-      grid-template-areas: "header header header header" "content content content content" "footer footer footer footer";
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  grid-row-gap: 9px;
+      grid-template-areas: "header navi navi navi" "content content content content" "footer footer footer footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header header .logo {
+  background: var(--light);
 }
 
 .mainNav {
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: header;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: navi;
 }
 
 .mainNav .main-nav-list {
-  float: right;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style-type: none;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.mainNav .main-nav-list a {
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  color: var(--dark);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+.mainNav .main-nav-list a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.mainNav .main-nav-list #active {
+  background: var(--dark-blue);
+  color: var(--light);
+}
+
+.mainContent {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: content;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.mainFooter {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: footer;
 }
 /*# sourceMappingURL=mygrid.css.map */

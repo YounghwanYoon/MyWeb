@@ -1,22 +1,95 @@
+:root{
+    --primary: black;
+    --dark:black;
+    --light: #fff;
+    --dark-blue: #00468B;
+    --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
 *{
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    margin: 30px 50px;
+    padding-top:30px;
+    height:100%;
+    background: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) no-repeat center center fixed;
+    background-size: cover;
 }
 
 .wrapper{
     display: grid;
     grid-template-columns: 1fr, 1fr, 1fr,1fr; 
     grid-template-rows: 1fr, 1fr, 1fr; 
+    justify-items: stretch;
+    align-items: stretch;
+    grid-row-gap: 9px;
+
     grid-template-areas:     
-    "header header header header"
+    "header navi navi navi"
     "content content content content"
     "footer footer footer footer";
+    //background-image: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
+
+}
+header{
+    grid-area: header;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    header .logo{
+        background:var(--light);
+    }
+    header i{
+        
+    }
 }
 
+
+
 .mainNav{
-    grid-area:header;
-    
+    grid-area:navi;
     .main-nav-list{
-        float:right;
+        display:grid;
+        grid-gap:20px;
+        padding:0;
+        list-style-type: none;
+        grid-template-columns: repeat(4, 1fr);
     }
+
+    .main-nav-list a {
+        display: block;
+        text-decoration: none;
+        padding: 0.8rem;
+        color: var(--dark);
+        font-size:1.1em;
+        text-transform: uppercase;
+        text-align:center;
+        box-shadow: var(--shadow);
+    }
+
+    .main-nav-list a:hover{
+        background: var(--dark); 
+        color: var(--light);
+    }
+
+    .main-nav-list #active{
+        background: var(--dark-blue);
+        color: var(--light);
+    }
+
+
+}
+
+.mainContent{
+    grid-area: content;
+    align-content: stretch;
+    justify-content: stretch;
+}
+
+.mainFooter{
+    grid-area: footer;
 }
