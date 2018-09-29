@@ -30,9 +30,8 @@ html,body{
 
 .header{
     display:grid;
-    padding: 10px;
     width:100vw;
-    height: 10vh;
+    height: 12vh;
     opacity: 0.8;
     align-items: center;
     background:var( --light-grey);
@@ -41,21 +40,19 @@ html,body{
     "logo navi navi navi";
     
     .logo{
-        padding:10px;
         grid-area: logo;
+        width:3vw;
         display:grid;
         align-items: center;
-        background:var( --light-grey);
         color: var(--dark-blue);
     }
     .mainNav{
-        padding:10px;
         grid-area: navi;
-        background:var( --light-grey);
         .main-nav-list{
             display:grid;
+            margin:0;
             grid-gap:20px;
-            padding:0;
+            padding:10px;
             list-style-type: none;
             grid-template-columns: repeat(4, 1fr);
         }
@@ -88,11 +85,21 @@ html,body{
     grid-area: content;
     background: #D3D3D3;
     opacity: 0.8;
+    text-align: center;
     p,ul{
         font-family: "Comic Sans MS", cursive, sans-serif;
         color:var(--dark-blue);
         padding:50px;
+        li{
+            list-style:none;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
     }
+    .contact{
+        padding: 0px;
+        list-style:none;
+    }
+
 }
 
 .mainFooter{
