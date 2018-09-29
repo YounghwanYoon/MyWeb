@@ -4,65 +4,72 @@
   --light: #fff;
   --dark-blue: #00468B;
   --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+  --light-grey:#D3D3D3;
 }
 
-* {
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-body {
-  margin: 30px 50px;
-  padding-top: 30px;
-  height: 100%;
   background: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) no-repeat center center fixed;
   background-size: cover;
 }
 
 .wrapper {
+  width: 100vw;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr, 1fr, 1fr,1fr;
-      grid-template-columns: 1fr, 1fr, 1fr,1fr;
-  -ms-grid-rows: 1fr, 1fr, 1fr;
-      grid-template-rows: 1fr, 1fr, 1fr;
-  justify-items: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  grid-row-gap: 9px;
-      grid-template-areas: "header navi navi navi" "content content content content" "footer footer footer footer";
+  -ms-grid-rows: auto, 1fr, auto;
+      grid-template-rows: auto, 1fr, auto;
+  -ms-grid-columns: auto, auto, auto, auto;
+      grid-template-columns: auto, auto, auto, auto;
+      grid-template-areas: "header header header header" "content content content content" "footer footer footer footer";
 }
 
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  width: 100vw;
+  height: 10vh;
+  opacity: 0.8;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background: var(--light-grey);
+  -ms-grid-columns: auto, auto, auto, auto;
+      grid-template-columns: auto, auto, auto, auto;
+      grid-template-areas: "logo navi navi navi";
 }
 
-header header .logo {
-  background: var(--light);
+.header .logo {
+  padding: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--light-grey);
+  color: var(--dark-blue);
 }
 
-.mainNav {
+.header .mainNav {
+  padding: 10px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: navi;
+  background: var(--light-grey);
 }
 
-.mainNav .main-nav-list {
+.header .mainNav .main-nav-list {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -72,7 +79,7 @@ header header .logo {
       grid-template-columns: repeat(4, 1fr);
 }
 
-.mainNav .main-nav-list a {
+.header .mainNav .main-nav-list a {
   display: block;
   text-decoration: none;
   padding: 0.8rem;
@@ -84,26 +91,30 @@ header header .logo {
           box-shadow: var(--shadow);
 }
 
-.mainNav .main-nav-list a:hover {
+.header .mainNav .main-nav-list a:hover {
   background: var(--dark);
   color: var(--light);
 }
 
-.mainNav .main-nav-list #active {
+.header .mainNav .main-nav-list #active {
   background: var(--dark-blue);
   color: var(--light);
 }
 
 .mainContent {
+  margin: 0px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: content;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  background: #D3D3D3;
+  opacity: 0.8;
+}
+
+.mainContent p, .mainContent ul {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: var(--dark-blue);
+  padding: 50px;
 }
 
 .mainFooter {
@@ -111,5 +122,27 @@ header header .logo {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--dark-blue);
+}
+
+.mainFooter p, .mainFooter a {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-style: italic;
+  color: var(--light-grey);
 }
 /*# sourceMappingURL=mygrid.css.map */

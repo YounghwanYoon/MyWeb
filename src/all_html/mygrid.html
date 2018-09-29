@@ -9,26 +9,28 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="logo">
-            <i class="fas fa-laptop-code fa-5x"></i>
+        <header class="header">
+            <div class="logo" style="justify-self: center ">
+                <i class="fas fa-laptop-code fa-3x"></i>
+            </div>
+            <nav class="mainNav">
+                <ul class="main-nav-list" >
+                    <li><a id = "active" onclick = "activeNaviButton(this)" href="mygrid.html">Home</a></li>
+                    <li><a id = "projects" onclick = "activeNaviButton(this)" href="projects.html">Projects</a></li>
+                    <li><a id = "resume" onclick = "activeNaviButton(this)" href="resume.html">Resume</a></li>
+                    <li><a id = "contact" onclick = "activeNaviButton(this)" href="">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <nav class="mainNav">
-            <ul class="main-nav-list" >
-                <li><a id = "active" onclick = "activeNaviButton(this)" href="mygrid.html">Home</a></li>
-                <li><a id = "projects" onclick = "activeNaviButton(this)" href="projects.html">Projects</a></li>
-                <li><a id = "resume" onclick = "activeNaviButton(this)" href="resume.html">Resume</a></li>
-                <li><a id = "contact" onclick = "activeNaviButton(this)" href="">Contact</a></li>
-            </ul>
-        </nav>
+        
         <div class="mainContent">
-            <p>helloworld!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Dolorum fugiat id perspiciatis possimus. Omnis magnam dolores doloribus asperiores minus sequi, aspernatur possimus voluptatibus repellendus, 
             praesentium sunt porro officiis culpa labore.</p>
+
         </div>
-        <footer class= "mainFooter">
-            <p>Reservce Right </p>
-            <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a>
+        <footer class= "mainFooter" style="align-self: flex-end">
+            <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>
         </footer>
     </div>
 </body>
