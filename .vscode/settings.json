@@ -8,5 +8,20 @@
     ],
     "python.unitTest.pyTestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
-    "python.unitTest.unittestEnabled": true
+    "python.unitTest.unittestEnabled": true,
+
+    
+    "liveServer.settings.port": 3500,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.CustomBrowser" : null, //"chrome",
+    //"liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+    "liveServer.settings.NoBrowser" : false,
+    "liveServer.settings.ignoreFiles" : [
+            ".vscode/**",
+            "**/*.scss",
+            "**/*.sass",
+            "**/*.ts"
+    ]
+
+    
 }

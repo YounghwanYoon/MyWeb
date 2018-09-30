@@ -112,7 +112,7 @@ html, body {
 .mainContent p, .mainContent ul {
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: var(--dark-blue);
-  padding: 50px;
+  padding: 0px;
 }
 
 .mainContent p li, .mainContent ul li {
