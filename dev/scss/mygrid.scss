@@ -14,13 +14,17 @@ html,body{
     box-sizing:border-box;
     background: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&h=650&w=940) no-repeat center center fixed;
     background-size: cover;
+    //overflow-x:hidden;
+
 }
 
 .wrapper{
     width:100vw;
     height:100vh;
+    min-height: 100%;
+    min-width: 100%;
     display: grid;
-    grid-template-rows: auto, 1fr, auto; 
+    grid-template-rows: auto, auto, auto; 
     grid-template-columns: auto, auto, auto, auto; 
     grid-template-areas:     
     "header header header header"
@@ -34,6 +38,7 @@ html,body{
     height: 12vh;
     opacity: 0.8;
     align-items: center;
+    padding-right: 10px;
     background:var( --light-grey);
     grid-template-columns: auto, auto, auto, auto; 
     grid-template-areas:     
@@ -41,7 +46,7 @@ html,body{
     
     .logo{
         grid-area: logo;
-        width:3vw;
+        width:1vw;
         display:grid;
         align-items: center;
         color: var(--dark-blue);
@@ -50,9 +55,9 @@ html,body{
         grid-area: navi;
         .main-nav-list{
             display:grid;
-            margin:0;
+            margin:10px;
             grid-gap:20px;
-            padding:10px;
+            padding:20px;
             list-style-type: none;
             grid-template-columns: repeat(4, 1fr);
         }
@@ -82,6 +87,9 @@ html,body{
 
 .mainContent{
     margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-width: 100%;
     grid-area: content;
     background: #D3D3D3;
     opacity: 0.8;
@@ -99,16 +107,27 @@ html,body{
         padding: 0px;
         list-style:none;
     }
+    .objective,.experiences,.relative_skills,.degree{
+        padding-bottom: 20px;
+    }
+    .objective,.experiences,.relative_skills,.degree p,li{
+        padding:0px 20px;
+    }
 
+    .relative_lists{
+        display:grid;
+        grid-template-areas:     
+        "li li li";
+    }
 }
 
 .mainFooter{
-    grid-area: footer;
-
-    grid-row:3/4;
-    grid-column:1/5;
+    grid-area:footer;
+    width: 100%;
+    min-width: 100%;
     display:flex;
     height:fit-content;
+    align-content: flex-end;
     justify-content: center;
     background-color:var(--dark-blue);
     p, a{

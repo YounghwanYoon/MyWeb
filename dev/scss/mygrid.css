@@ -21,10 +21,12 @@ html, body {
 .wrapper {
   width: 100vw;
   height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto, 1fr, auto;
-      grid-template-rows: auto, 1fr, auto;
+  -ms-grid-rows: auto, auto, auto;
+      grid-template-rows: auto, auto, auto;
   -ms-grid-columns: auto, auto, auto, auto;
       grid-template-columns: auto, auto, auto, auto;
       grid-template-areas: "header header header header" "content content content content" "footer footer footer footer";
@@ -39,6 +41,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 10px;
   background: var(--light-grey);
   -ms-grid-columns: auto, auto, auto, auto;
       grid-template-columns: auto, auto, auto, auto;
@@ -49,7 +52,7 @@ html, body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: logo;
-  width: 3vw;
+  width: 1vw;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -68,9 +71,9 @@ html, body {
 .header .mainNav .main-nav-list {
   display: -ms-grid;
   display: grid;
-  margin: 0;
+  margin: 10px;
   grid-gap: 20px;
-  padding: 10px;
+  padding: 20px;
   list-style-type: none;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
@@ -100,6 +103,9 @@ html, body {
 
 .mainContent {
   margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-width: 100%;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
@@ -125,23 +131,35 @@ html, body {
   list-style: none;
 }
 
+.mainContent .objective, .mainContent .experiences, .mainContent .relative_skills, .mainContent .degree {
+  padding-bottom: 20px;
+}
+
+.mainContent .objective, .mainContent .experiences, .mainContent .relative_skills, .mainContent .degree p, .mainContent li {
+  padding: 0px 20px;
+}
+
+.mainContent .relative_lists {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "li li li";
+}
+
 .mainFooter {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: footer;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/5;
+  width: 100%;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
