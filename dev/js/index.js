@@ -19,5 +19,5 @@ ReactDOM.render(
     <Provider store={store}>
         <App />
     </Provider>,
-    document.getElementById('main_content')
+    document.getElementById('#main_content')
 );

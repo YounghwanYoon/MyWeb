@@ -2,9 +2,8 @@
 <html lang ="en">
 <head>
     <meta charset="UTF-8">
+    <meta name = "viewport" content="width=devie-width, initial-scale=1" >
     <title>Testing Grid System</title>
-    <script src ="../js/list.js"></script>
-    <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="../../dev/scss/mygrid.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -19,20 +18,21 @@
                     <li><a id = "home" onclick = "activeNaviButton(this)" href="mygrid.html">Home</a></li>
                     <li><a id = "active" onclick = "activeNaviButton(this)" href="projects.html">Projects</a></li>
                     <li><a id = "resume" onclick = "activeNaviButton(this)" href="resume.html">Resume</a></li>
-                    <li><a id = "contact" onclick = "activeNaviButton(this)" href="Contact.html">Contact</a></li>
+                    <li><a id = "contact" onclick = "activeNaviButton(this)" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="mainContent"> 
-            <div class="main">
-                <section id="main_content">
-                </section>
-                <script src="../js/bundle.min.js"></script>
-            </div> 
+            
         </div>
         <footer class= "mainFooter" style="align-self: flex-end">
                 <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>
         </footer>
     </div>
+    <div class="main" id="main">
+        <div id="main_content"></div>    
+        <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>   
+        <script src="../../src/js/bundle.min.js" defer></script>
+    </div> 
 </body>
 </html>
