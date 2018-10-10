@@ -17,11 +17,10 @@ html, body {
   float: right;
   list-style: none;
   margin-top: 30px;
-  visibility: hidden;
 }
 
 .change .main-nav {
-  visibility: visible;
+  visibility: visibles;
 }
 
 .main-nav li {
@@ -72,10 +71,6 @@ html, body {
   -webkit-transform: rotate(-45deg) translate(9px, -6px);
   transform: rotate(45deg) translate(-9px, -6px);
   width: 30px;
-}
-
-.main {
-  visibility: hidden;
 }
 
 .change #main_content {
