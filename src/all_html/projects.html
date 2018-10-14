@@ -6,6 +6,7 @@
     <title>Testing Grid System</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="../../dev/scss/mygrid.css" rel="stylesheet" type="text/css"/>
+    <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>   
 </head>
 <body>
     <div class="wrapper">
@@ -22,17 +23,16 @@
                 </ul>
             </nav>
         </header>
-        <div class="mainContent"> 
-            
-        </div>
+
         <footer class= "mainFooter" style="align-self: flex-end">
                 <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>
         </footer>
+        <div class="mainContent" > 
+            <div class="main" id="main">
+                <div id="root"></div>   
+                <script src="../../src/js/bundle.min.js" defer></script>
+            </div> 
+        </div>
     </div>
-    <div class="main" id="main">
-        <div id="main_content"></div>    
-        <script src = "https://code.jquery.com/jquery-3.2.1.js"></script>   
-        <script src="../../src/js/bundle.min.js" defer></script>
-    </div> 
 </body>
 </html>
