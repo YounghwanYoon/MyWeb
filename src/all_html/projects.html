@@ -14,8 +14,11 @@
             for (i = 0; i < z.length; i++) {
                 elmnt = z[i];
                 /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("w3-include-html");
+                file = elmnt.getAttribute("include-html");
                 if (file) {
+                                    
+                console.log(file);
+                console.log("Done");
                 /*make an HTTP request using the attribute value as the file name:*/
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
@@ -23,7 +26,7 @@
                     if (this.status == 200) {elmnt.innerHTML = this.responseText;}
                     if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
                     /*remove the attribute, and call this function once more:*/
-                    elmnt.removeAttribute("w3-include-html");
+                    elmnt.removeAttribute("include-html");
                     includeHTML();
                     }
                 }      
@@ -33,7 +36,7 @@
                 return;
                 }
             }
-            };
+        };
     </script>
 </head>
 <body>
@@ -52,10 +55,8 @@
             </nav>
         </header>
         <div class="mainContent"> 
-            <div class="main" id="main">
-                <div w3-include-html="../index.html"></div>
-                <script>includeHTML()</script>
-            </div> 
+            <div include-html="../index.html"></div>
+            <script>includeHTML()</script>
         </div>
         <footer class= "mainFooter" style="align-self: flex-end">
                 <p>Click to <a id="email" href="mailto:ray.yoon87@gmail.com">Contact</a></p>

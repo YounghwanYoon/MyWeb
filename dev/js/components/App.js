@@ -1,7 +1,7 @@
 import React from 'react';
 import UserList from '../containers/project-list';
 import UserDetails from '../containers/user-detail';
-require('../../scss/style.scss');
+require('../../../src/vendor/style.scss');
 
 const App = () => (
     <div>
